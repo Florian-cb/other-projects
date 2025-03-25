@@ -1,10 +1,10 @@
-const form = document.querySelector('#submit');
+const form = document.querySelector('#form');
 const input = document.querySelector('#add');
 const list = document.querySelector('#list');
 
 form.addEventListener("submit", function (e) {
     e.preventDefault();
-    const add = input.value;
+    const add = input.value + ' ';
     if (add.trim() === "") return; // prevent adding empty items
 
     // Create new list item
