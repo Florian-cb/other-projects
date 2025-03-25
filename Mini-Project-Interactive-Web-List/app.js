@@ -21,21 +21,19 @@ form.addEventListener("submit", function (e) {
     const add = input.value;
     if (add.trim() === "") return; // prevent adding empty items
 
-    // Create new list item and delete button
+    // Create new list item
     const newLi = document.createElement("li");
     newLi.innerText = add;
+    list.append(newLi);
 
+    // Create delete button item beside the added list item
     const deleteBtn = document.createElement("button");
     deleteBtn.innerText = "Delete";
-    deleteBtn.style.marginLeft = "10px"; // optional styling
-
-    // Attach event listener to the delete button
     deleteBtn.addEventListener("click", function () {
         newLi.remove();
     });
-
-    // Append the delete button to the list item, then the list item to the list
     newLi.appendChild(deleteBtn);
-    list.append(newLi);
+
+    // Erases input text after the new list item is submitted
     input.value = "";
 });
