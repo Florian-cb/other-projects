@@ -1,17 +1,3 @@
-// const form = document.querySelector('#submit');
-// const input = document.querySelector('#add');
-// const list = document.querySelector('#list');
-
-// form.addEventListener("submit", function (e) {
-//     e.preventDefault();
-//     const add = input.value;
-//     const newLi = document.createElement("li");
-//     newLi.innerText = add;
-//     console.log(newLi);
-//     list.append(newLi);
-//     input.value = "";
-// })
-
 const form = document.querySelector('#submit');
 const input = document.querySelector('#add');
 const list = document.querySelector('#list');
